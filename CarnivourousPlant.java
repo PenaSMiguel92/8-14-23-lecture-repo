@@ -1,4 +1,4 @@
-abstract class CarnivourousPlant {
+abstract class CarnivourousPlant implements Carnivourous {
     private String name;
     private boolean isHungry;
 
@@ -17,6 +17,13 @@ abstract class CarnivourousPlant {
 
     public void setIsHungry(boolean hungry) {
         this.isHungry = hungry;
+    }
+
+    @Override 
+    public abstract void capturePrey();
+
+    public void printStatus() {
+        System.out.println("Plant: " + name + ", Hungry: " + isHungry);
     }
 
 }
